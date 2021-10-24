@@ -130,8 +130,6 @@
     padding-bottom: 10px;
     display:grid;
     place-items: center;
-    
-
 }
 
 .main .main-inside .main-inside-sub-3 {
@@ -197,9 +195,9 @@
 }
 
 .main .main-inside .main-inside-sub-3 .widget {
-    border: solid 1px rgba(0, 0, 0, 0.2);
+    outline: solid 1px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    height: 200px;
+    height: 400px;
     background-color: white;
   
     display: grid;
@@ -210,7 +208,73 @@
     position: sticky;
     top: 15px;
 }
-  
+
+.main .main-inside .main-inside-sub-3 .widget.one {
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr 1fr;
+    grid-gap: 10px;
+    outline: 0.5px solid #000;
+}
+
+.main .main-inside .main-inside-sub-3 .widget.one .list-items {
+    outline: 0.5px solid #000;
+    display: grid;
+    grid-gap: 10px;
+}
+
+ .main .main-inside .main-inside-sub-3 .widget.one .list-items .item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: start;
+    place-items: center;
+    border-bottom: 1px solid #3e79d3;
+} 
+
+.main .main-inside .main-inside-sub-3 .widget.one .list-items img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: 1px solid #3e79d3;
+}
+
+.main .main-inside .main-inside-sub-3 .widget.one .background h3 {
+    font-size: 20px;
+    padding-left: 10px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.main .main-inside .main-inside-sub-3 .widget.one .button {
+    display: grid;
+    place-items: center;
+    outline: 0.5px solid #000;
+}
+
+.main .main-inside .main-inside-sub-3 .widget.one .button input {
+    background-color: #3e79d3;
+    color: #fff;
+    border-radius: 40%;
+    padding: 10px 100px;
+    font-size: 14px;
+    font-weight: 700;
+
+}
+
+.main .main-inside .main-inside-sub-3 .widget.one .links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    grid-gap: 20px;
+}
+
+.main .main-inside .main-inside-sub-3 .widget.one .links a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+
 @media screen and (max-width: 700px) {
 
     .main .main-inside {
