@@ -196,11 +196,53 @@ a {
 }
   
 .main .main-inside .main-inside-sub-2 .post {
-    height: 180px;
+    height: 450px;
     display: grid;
-    place-items: center;
+    /* place-items: center; */
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 5px;
+    grid-gap: 20px;
+    place-items: center;
+}
+
+.main .main-inside .main-inside-sub-2 .post .sub-post {
+    display: grid;
+    grid-template: 
+    "number special special" 0.1fr
+    "number p img" 0.8fr
+    "number link link" 0.1fr /
+    0.1fr 0.7fr 0.2fr;
+    grid-gap: 20px;
+    padding-left: 20px;
+}
+
+.main .main-inside .main-inside-sub-2 .post span.number {
+    grid-area: number;
+    padding-top: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+}
+
+.main .main-inside .main-inside-sub-2 .post .post-special {
+    grid-area: special;
+    font-size: 14px;
+    color: #3e79d3;
+}
+
+.main .main-inside .main-inside-sub-2 .post a {
+    grid-area: link;
+}
+
+.main .main-inside .main-inside-sub-2 .post p {
+    grid-area: p;
+    color:#5f6368;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.main .main-inside .main-inside-sub-2 .post img {
+    grid-area: img;
 }
 
 .main .main-inside .main-inside-sub-3 .widget {
