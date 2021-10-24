@@ -8,19 +8,87 @@
 .container-menus {
     height: 100vh;
     display: grid;
-    grid-template-rows: auto 1fr;
+    /* grid-template-rows: auto 1fr; */
+    grid-template: 
+    "header" auto
+    "main" 1fr /
+    1fr;
 }
 
-/* .header .logo {
+.header {
+    grid-area: header;
+    outline: 1px solid black;
     display: grid;
-    grid-auto-flow: column;
-    justify-content: start;
-    align-items: center;
-    grid-gap: 10px;
-  } */
+    grid-template: 
+    "header-sub-1 header-sub-2 header-sub-3" 1fr / 
+    0.5fr 2fr 1fr;
+}
+
+.header-sub-1 {
+    grid-area: header-sub-1;
+    outline: 0.5px solid black;
+}
+
+.header-sub-2 {
+    grid-area: header-sub-2;
+    outline: 0.5px solid black;
+}
+
+.header-sub-3 {
+    grid-area: header-sub-3;
+    outline: 0.5px solid black;
+    display: grid;
+} /* end of nested grid for header */
+
+.header-sub-3 .icons-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 25px;
+    place-items: center;
+    padding-left: 10px;
+}
+
+.header-sub-3 .icons-header i {
+    font-size: 20px;
+    color: #5f6368;
+}
+
+.header-sub-3 .icons-header input {
+    border-radius: 15%;
+    background-color: transparent;
+    color: royalblue;
+    padding: 8px 30px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid royalblue;
+}
+
+/*customizing grids for header-sub-2 */
+.header-sub-2 {
+    display: grid;
+}
+
+.header-sub-2 .search-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    place-items: center;
+}
+
+.header-sub-2 .search-bar input {
+    background-color: #f1f3f4;
+    height: 35px;
+    width: 40vw;
+    border-radius: 5%;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 10px;
+}
 
 /*CREATING MAIN WITH SUB-LAYUOUTS CSS GRIDS */
 .main {
+    grid-area: main;
     display: grid;
     overflow: scroll;
     grid-template-columns: minmax(400px,1000px);
@@ -53,7 +121,13 @@
     padding: 20px 0px;
     display: grid;
     align-content: start;
-    grid-gap: 10px;
+    grid-gap: 15px;
+}
+
+.main .main-inside .main-inside-sub-2 h2 {
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 10px;
 }
 
 .main .main-inside .main-inside-sub-3 {
