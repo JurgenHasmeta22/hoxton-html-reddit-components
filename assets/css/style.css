@@ -187,7 +187,7 @@ a {
     font-weight: 700;
     font-size: 14px;
     color: #f1f3f4;
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
 .trending-item img {
@@ -196,13 +196,14 @@ a {
 }
   
 .main .main-inside .main-inside-sub-2 .post {
-    height: 450px;
+    height: auto;
     display: grid;
     /* place-items: center; */
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 5px;
     grid-gap: 20px;
     place-items: center;
+    width: auto;
 }
 
 .main .main-inside .main-inside-sub-2 .post .sub-post {
@@ -211,7 +212,7 @@ a {
     "number special special" 0.1fr
     "number p img" 0.8fr
     "number link link" 0.1fr /
-    0.1fr 0.7fr 0.2fr;
+    0.1fr 0.7fr auto;
     grid-gap: 20px;
     padding-left: 20px;
 }
@@ -245,12 +246,35 @@ a {
     grid-area: img;
 }
 
+.main .main-inside .main-inside-sub-2 .post .icons-post {
+    display: grid;
+    align-content: start;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    place-items: center;
+    padding-left: 10px;
+}
+
+.main .main-inside .main-inside-sub-2 .post .icons-post .icons i {
+    font-size: 21px;
+    color: #3e79d3;
+}
+
+.main .main-inside .main-inside-sub-2 .post .icons-post .icons span {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+#strong {
+    font-size: 18px;
+    font-weight: 900;
+}
 .main .main-inside .main-inside-sub-3 .widget {
     outline: solid 1px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    height: 430px;
+    height: auto;
     background-color: white;
-  
+    width: auto;
     display: grid;
     /* place-items: center; */
 }
@@ -279,6 +303,7 @@ a {
     align-content: start;
     place-items: center;
     border-bottom: 1px solid #3e79d3;
+    padding-top: 5px;
 } 
 
 .main .main-inside .main-inside-sub-3 .widget.one .list-items img {
@@ -427,16 +452,48 @@ a {
 
 @media screen and (max-width: 700px) {
 
-    .main .main-inside {
+     .header .header-sub-3 {
+        display: none;
+    }
+
+    .header {
+        grid-template:
+        "header-sub-1 header-sub-2" 1fr /
+        0.5fr 0.5fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .main .main-inside .main-inside-sub-3 .widget {
+       display: none;
+   }
+
+   .main .main-inside .main-inside-sub-3 {
+    display: none;
+}
+
+   .main .main-inside {
+       grid-template: 
+       "main-inside-sub-1 main-inside-sub-1" auto
+       "main-inside-sub-2 main-inside-sub-2" 1fr /
+        1fr 1fr;
+   }
+
+}
+
+    /* .main .main-inside {
       grid-template:
         'main-inside-sub-1' auto
         'main-inside-sub-2' 1fr /
-        1fr;
+        0.5fr;
     }
   
     .main .main-inside .main-inside-sub-3 {
       display: none;
-    }
+    }  */
+
 
 }
+
   
